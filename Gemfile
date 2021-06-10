@@ -23,6 +23,7 @@ gem 'rubocop-rails'
 gem 'rubocop-rspec'
 gem 'meta-tags'
 gem 'breadcrumbs_on_rails'
+gem 'ancestry'
 
 
 group :development, :test do

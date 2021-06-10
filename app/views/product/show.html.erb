@@ -15,8 +15,20 @@
       <div class="col-md-9 single-main-left">
         <div class="sngl-top">
           <div class="col-md-5 single-top-left">
-
-            <div class="flexslider">
+            <% unless @product.galleries == [] %>
+              <div class="flexslider">
+                <ul class="slides">
+                  <% @product.galleries.each do |item| %>
+                    <li data-thumb="<%= asset_path item['img'] %>">
+                      <div class="thumb-image">
+                        <img src="<%= asset_path item['img'] %>" alt="" data-imagezoom="true" class="img-responsive" alt=""/>
+                      </div>
+                    </li>
+                  <% end %>
+                </ul>
+              </div>
+            <% else %>
+              <div class="flexslider">
               <ul class="slides">
                 <li data-thumb="<%= asset_path 's-1.jpg' %>">
                   <div class="thumb-image">
@@ -35,6 +47,7 @@
                 </li>
               </ul>
             </div>
+            <% end %>
           </div>
 
           <div class="col-md-7 single-top-right">
