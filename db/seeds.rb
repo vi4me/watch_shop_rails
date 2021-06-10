@@ -55,7 +55,7 @@ end
 # - - - - - - - -
 
 
-# table products
+# table product
 product_attributes = [
   {
     category_id: '6',
@@ -334,7 +334,7 @@ end
 # - - - - -
 
 
-# table related products
+# table related product
 
 # look into migration related_products
 
