@@ -32,6 +32,7 @@ Rails.application.config.assets.precompile += %w[easydrop.js]
 Rails.application.config.assets.precompile += %w[mem.js]
 Rails.application.config.assets.precompile += %w[responsive.js]
 Rails.application.config.assets.precompile += %w[flex.js]
+Rails.application.config.assets.precompile += %w[my.js]
 
 Rails.application.config.assets.precompile += %w[glyphicons-halflings-regular.eot]
 Rails.application.config.assets.precompile += %w[glyphicons-halflings-regular.ttf]
