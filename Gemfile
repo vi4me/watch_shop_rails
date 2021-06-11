@@ -24,7 +24,8 @@ gem 'rubocop-rspec'
 gem 'meta-tags'
 gem 'breadcrumbs_on_rails'
 gem 'ancestry'
-
+gem 'devise'
+gem 'simple_form'
 
 group :development, :test do
   gem 'standard'
