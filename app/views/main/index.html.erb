@@ -57,6 +57,7 @@
                   <h3><a href="product/<%= hit.id %>"><%= hit.title %></a></h3>
                   <p>Explore Now</p>
                   <h4>
+<%# TODO                     %>
                     <%= link_to 'cart_items', class: 'add-to-cart-link', data: { id: hit.id } do %>
                       <i></i>
                     <% end %>
@@ -80,4 +81,4 @@
     </div>
   </div>
 <% end %>
-<!--<input type="hidden" value="<%#= !current_user.nil? ? 88 : 99 %>" id="cart_access" />-->
+<input type="hidden" value="<%= !current_user.nil? ? 88 : 99 %>" id="cart_access" />
