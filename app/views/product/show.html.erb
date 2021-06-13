@@ -121,9 +121,7 @@
           <ul class="menu_drop">
             <li class="item1"><a href="#"><img src="<%= asset_path 'arrow.png' %>" alt="">Description</a>
               <ul>
-                <li class="subitem1"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dignissimos ipsa iusto labore laudantium magni obcaecati quia quidem quis, repudiandae similique soluta velit. Debitis explicabo, fugiat molestias nulla tempore unde.</a></li>
-                <li class="subitem2"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dignissimos ipsa iusto labore laudantium magni obcaecati quia quidem quis, repudiandae similique soluta velit. Debitis explicabo, fugiat molestias nulla tempore unde.</a></li>
-                <li class="subitem3"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dignissimos ipsa iusto labore laudantium magni obcaecati quia quidem quis, repudiandae similique soluta velit. Debitis explicabo, fugiat molestias nulla tempore unde.</a></li>
+                <li class="subitem1"><a href="#"><%= @product.description %></a></li>
               </ul>
             </li>
 
@@ -173,7 +171,7 @@
                     <h3><a href="<%= related.id %>"><%= related.title %></a></h3>
                     <p>Explore Now</p>
                     <h4>
-                      <a href="cart/add?id=<%= related.id %>" data-id="<%= related.id %>" class="item-add add_to_cart-link"><i></i></a>
+                      <a href="cart/add?id=<%= related.id %>" data-id="<%= related.id %>" class="item-add add-to-cart-link"><i></i></a>
                       <span class="item-price"><%= related.price %></span>
                       <% if related.old_price %>
                         <del><%= related.old_price %></del>
@@ -203,7 +201,7 @@
                           <h3><a href="<%= recently.id %>"><%= recently.title %></a></h3>
                           <p>Explore Now</p>
                           <h4>
-                            <a href="cart/add?id=<%= recently.id %>" data-id="<%= recently.id %>" class="item-add add_to_cart-link"><i></i></a>
+                            <a href="cart/add?id=<%= recently.id %>" data-id="<%= recently.id %>" class="item-add add-to-cart-link"><i></i></a>
                             <span class="item-price"><%= recently.price %></span>
                             <% if recently.old_price %>
                               <del><%= recently.old_price %></del>
@@ -304,3 +302,4 @@
     </div>
   </div>
 </div>
+<input type="hidden" value="<%= !current_user.nil? ? 88 : 99 %>" id="cart_access" />

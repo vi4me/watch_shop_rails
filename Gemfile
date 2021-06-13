@@ -26,6 +26,8 @@ gem 'breadcrumbs_on_rails'
 gem 'ancestry'
 gem 'devise'
 gem 'simple_form'
+gem 'omniauth'
+gem 'omniauth-facebook'
 
 group :development, :test do
   gem 'standard'
