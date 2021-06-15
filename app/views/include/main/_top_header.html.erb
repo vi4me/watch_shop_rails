@@ -26,10 +26,10 @@
               <% if user_signed_in? %>
                 <% if current_user.try(:admin?) %>
                   <li>
-                    <%= link_to 'administrator', '/oauth/applications', style: "color: red" %>
+                    <%= link_to 'administrator', '#', style: "color: red" %>
                   </li>
                   <li>
-                    <%= link_to 'API', '#', style: "color: blue" %>
+                    <%= link_to 'API', '/oauth/applications', style: "color: blue" %>
                   </li>
                 <% end %>
                 <li>

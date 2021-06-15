@@ -1,5 +1,7 @@
 class ApplicationController < ActionController::Base
 
+  include Pundit
+
   def current_cart
     @current_cart ||= begin
       Cart.find_or_create_by(user: current_user)
@@ -18,4 +20,9 @@ class ApplicationController < ActionController::Base
   end
 
   helper_method :current_cart, :cart_items, :cart_total
+
+  rescue_from Pundit::NotAuthorizedError do
+    flash[:alert] = "You are not authorized to perform this action."
+    redirect_to root_path
+  end
 end

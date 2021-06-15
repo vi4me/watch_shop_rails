@@ -10,6 +10,7 @@ require 'devise'
 require 'shoulda-matchers'
 require 'rspec/json_expectations'
 require 'database_cleaner'
+require 'pundit/rspec'
 
 # Add additional requires below this line. Rails is not loaded until this point!
 

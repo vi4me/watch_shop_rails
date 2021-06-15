@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  use_doorkeeper
+
   devise_for :users, controllers: { omniauth_callbacks: 'omniauth_callbacks' }
 
   root to: 'main#index'
@@ -11,4 +13,12 @@ Rails.application.routes.draw do
   resources :product, only: [:show]
   resources :category, only: [:show]
   resources :search, only: [:index]
+
+  namespace :api do
+    namespace :v1 do
+      resources :profile, only: [:index]
+      resources :products, only: [:index]
+
+    end
+  end
 end

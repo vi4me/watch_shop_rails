@@ -28,6 +28,9 @@ gem 'devise'
 gem 'simple_form'
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'pundit'
+gem 'doorkeeper'
+gem 'active_model_serializers'
 
 group :development, :test do
   gem 'standard'
