@@ -46,37 +46,23 @@
           <section class="sky-form">
             <h4>Categories</h4>
             <div class="row1 scroll-pane">
-              <div class="col col-4">
-                <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>All Accessories</label>
-              </div>
-              <div class="col col-4">
-                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Woman Watches</label>
-                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Kids Watches</label>
-                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Men Watches</label>
-              </div>
+              <% @categories.each do |category| %>
+                <div class="col col-4">
+                  <label class="checkbox"><input type="checkbox" name="checkbox"><i></i><%= link_to category.title, "/category/#{category.id}" %></label>
+                </div>
+              <% end %>  
             </div>
           </section>
-
+          
           <section class="sky-form">
             <h4>Brand</h4>
             <div class="row1 row2 scroll-pane">
-              <div class="col col-4">
-                <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>kurtas</label>
-              </div>
-              <div class="col col-4">
-                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Sonata</label>
-                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Titan</label>
-                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Casio</label>
-                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Omax</label>
-                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>shree</label>
-                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Fastrack</label>
-                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Sports</label>
-                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Fossil</label>
-                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Maxima</label>
-                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Yepme</label>
-                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Citizen</label>
-                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Diesel</label>
-              </div>
+              <% @brands.each do |brand|%>
+                
+                <div class="col col-4">
+                  <label class="checkbox"><input type="checkbox" name="checkbox"><i></i><%= link_to brand.title, category_path %></label>
+                </div>
+              <% end %>
             </div>
           </section>
 

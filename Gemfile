@@ -31,6 +31,10 @@ gem 'omniauth-facebook'
 gem 'pundit'
 gem 'doorkeeper'
 gem 'active_model_serializers'
+gem 'shrine', '~> 3.3'
+gem 'shrine-cloudinary', '~> 1.1'
+gem 'image_processing'
+gem 'activeadmin'
 
 group :development, :test do
   gem 'standard'

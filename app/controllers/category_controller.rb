@@ -1,7 +1,9 @@
 class CategoryController < ApplicationController
 
   def show
+    @categories = Category.all
     @category = Category.find(params[:id])
+    @brands = Brand.all
     set_page_options
   end
 

@@ -4,7 +4,8 @@ class ProductController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
-    # authorize @product
+    @categories = Category.all
+    @brands = Brand.all
     set_page_options
   end
 

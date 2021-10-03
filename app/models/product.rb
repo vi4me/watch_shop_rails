@@ -1,6 +1,8 @@
 # frozen_string_literal:true
 
 class Product < ApplicationRecord
+  
+  include ImageUploader::Attachment(:image)
 
   has_many :related_products
   has_many :related, through: :related_products

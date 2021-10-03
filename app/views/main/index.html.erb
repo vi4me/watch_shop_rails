@@ -50,7 +50,7 @@
             <div class="col-xs-6 col-sm-4 col-md-3 product-left">
               <div class="product-main simpleCart_shelfItem">
                 <a href="product/<%= hit.id %>" class="mask">
-                  <%= image_tag(hit.img, alt: "", class: 'img-responsive zoom-img') %>
+                  <%= image_tag(hit.image_url, alt: "", class: 'img-responsive zoom-img') if hit.image_url %>
                 </a>
                 <div class="product-bottom">
                   <h3><a href="product/<%= hit.id %>"><%= hit.title %></a></h3>

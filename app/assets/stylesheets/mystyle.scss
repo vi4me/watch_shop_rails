@@ -10,11 +10,14 @@
   float: left;
 }
 
+.menu_drop ul li a {
+  background-color: inherit;
+  text-decoration: none;
+}
 
 #cart table img{
   height: 80px;
 }
-
 
 .del-item{
   cursor: pointer;
