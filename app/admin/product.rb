@@ -1,12 +1,13 @@
 ActiveAdmin.register Product do
 
-  permit_params :category_id, :title, :bytitle, :description,
+  permit_params :category_id, :brand_id, :title, :bytitle, :description,
   :content, :price, :old_price, :status, :image, :hit, :related
 
   index do
     selectable_column
     id_column
     column "category", :category
+    column "brand", :brand_id
     column "title", :title
     column "bytitle", :bytitle
     column "Описание", :description
@@ -27,7 +28,8 @@ ActiveAdmin.register Product do
 
   form(html: { multipart: true }) do |f|
     f.inputs "Group" do
-      f.input :category_id
+      f.input :category
+      f.input :brand_id
       f.input :title
       f.input :bytitle
       f.input :description

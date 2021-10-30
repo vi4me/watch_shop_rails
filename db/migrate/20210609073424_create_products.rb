@@ -11,7 +11,7 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.integer :status
       t.string :keywords
       t.string :description
-      t.string :img, default: 'no_image.jpg'
+      t.string :img
       t.integer :hit, default: 0
 
       t.timestamps

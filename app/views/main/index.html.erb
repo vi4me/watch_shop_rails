@@ -24,7 +24,7 @@
         <% @brands.each do |i| %>
           <div class="col-sm-4 about-left">
             <figure class="effect-bubba">
-              <%= image_tag(i.img, alt: "", class: "img-responsive") %>
+              <%= image_tag(i.image_url, alt: "", class: "img-responsive") %> 
               <figcaption>
                 <h2><%= i.title %></h2>
                 <p><%= i.description %></p>

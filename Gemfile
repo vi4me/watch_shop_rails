@@ -35,6 +35,7 @@ gem 'shrine', '~> 3.3'
 gem 'shrine-cloudinary', '~> 1.1'
 gem 'image_processing'
 gem 'activeadmin'
+gem "active_admin-sortable_tree", "~> 2.0.0"
 
 group :development, :test do
   gem 'standard'

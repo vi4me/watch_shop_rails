@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(version: 2021_07_27_175231) do
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "image_data"
   end
 
   create_table "cart_items", force: :cascade do |t|
@@ -144,7 +145,7 @@ ActiveRecord::Schema.define(version: 2021_07_27_175231) do
     t.integer "status"
     t.string "keywords"
     t.string "description"
-    t.string "img", default: "no_image.jpg"
+    t.string "img"
     t.integer "hit", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -31,7 +31,7 @@
             <% else %>
               <div class="flexslider">
               <ul class="slides">
-                <li data-thumb="<%= item.image_url %>">
+                <li data-thumb="<%= item.image_url%>">
                   <div class="thumb-image">
                     <%= image_tag(item.image_url, alt: "", :data => { :imagezoom => "true" }, class: "img-responsive") if item.image_url %>
                   </div>
@@ -86,7 +86,7 @@
               </div>
               <ul class="tag-men">
                 <li><span>Category</span>
-                <strong>: <a href="/category/<%= @product.category.bytitle %>" style="...">
+                <strong>: <a href="/category/<%= @product.category.id %>" style="...">
                   <%= @product.category.title %></a>
                 </strong>
                 </li>
@@ -221,17 +221,18 @@
               <% end %> 
             </div>
           </section>
-
-          <section class="sky-form">
-            <h4>Brands</h4>
-            <div class="row1 row2 scroll-pane">
-              <% @brands.each do |brand|%>
-                <div class="col col-4">
-                  <label class="checkbox"><input type="checkbox" name="checkbox"><i></i><%= link_to brand.title, category_path %></label>
-                </div>
-              <% end %>
-            </div>
-          </section>
+          <% if @brands.present? %>
+            <section class="sky-form">
+              <h4>Brands</h4>
+              <div class="row1 row2 scroll-pane">
+                <% @brands.each do |brand|%>
+                  <div class="col col-4">
+                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i><%= link_to brand.title, category_path %></label>
+                  </div>
+                <% end %>
+              </div>
+            </section>
+          <% end %>
 
           <section class="sky-form">
             <h4>Colour</h4>
